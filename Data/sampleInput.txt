@@ -1,0 +1,12 @@
+Aberden, 23
+Bradford, 2
+Bradford, 20
+Cardiff, 12
+Durham, 0
+Edinburgh, 54
+Edinburgh, 23
+Ruislip, bad format
+Ruislip, 10
+faulty
+
+Yeovil, 100
