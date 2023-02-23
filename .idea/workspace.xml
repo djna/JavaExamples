@@ -5,36 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b14c49ad-d749-4d54-b098-616f908ccce0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_approvaltests_approvaltests_18_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_approvaltests_approvaltests_util_18_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaExamples.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tennis/Tennis.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tennis/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tennis/src/main/java/TennisGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tennis/src/main/java/TennisGame1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tennis/src/main/java/TennisGame2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tennis/src/main/java/TennisGame3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tennis/src/main/java/TennisGame4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tennis/src/test/java/TennisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis/src/main/java/TennisGame1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis/src/main/java/TennisGame3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis/src/main/java/TennisGame4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tennis/src/test/java/TennisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tennis/src/test/java/TennisTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +40,7 @@
       <recent name="$PROJECT_DIR$/Tennis/src/main/java" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.TennisTest.checkAllScoresTennisGame2">
     <configuration name="TennisTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tennis" />
       <option name="PACKAGE_NAME" value="" />
@@ -75,8 +50,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TennisTest.checkAllScoresTennisGame2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tennis" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TennisTest" />
+      <option name="METHOD_NAME" value="checkAllScoresTennisGame2(int,int,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TennisTest.checkAllScoresTennisGame2" />
         <item itemvalue="JUnit.TennisTest" />
       </list>
     </recent_temporary>
