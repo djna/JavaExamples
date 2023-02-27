@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b14c49ad-d749-4d54-b098-616f908ccce0" name="Changes" comment="">
+    <list default="true" id="d6dcfde9-2eba-4a24-b95d-a1f9402dcdfe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tennis/src/main/java/TennisGame1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tennis/src/main/java/TennisGame3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tennis/src/main/java/TennisGame4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tennis/src/test/java/TennisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tennis/src/test/java/TennisTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,63 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="2KJJmcDfawTAO5seVR455p4N8Nh" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="jdk.selected.JAVA_MODULE" value="16" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Tennis/src/test/java" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Tennis/src/test/java" />
-      <recent name="$PROJECT_DIR$/Tennis/src/main/java" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JUnit.TennisTest.checkAllScoresTennisGame2">
-    <configuration name="TennisTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Tennis" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TennisTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TennisTest.checkAllScoresTennisGame2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Tennis" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TennisTest" />
-      <option name="METHOD_NAME" value="checkAllScoresTennisGame2(int,int,java.lang.String)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.TennisTest.checkAllScoresTennisGame2" />
-        <item itemvalue="JUnit.TennisTest" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="b14c49ad-d749-4d54-b098-616f908ccce0" name="Changes" comment="" />
-      <created>1673686930203</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1673686930203</updated>
-    </task>
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,5 +28,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
