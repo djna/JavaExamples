@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9abd7d83-acdd-4d13-b63f-f7e00574760a" name="Changes" comment="" />
+    <list default="true" id="9abd7d83-acdd-4d13-b63f-f7e00574760a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CountdownSong/src/main/java/org/djna/countdown/CountdownSong.java" beforeDir="false" afterPath="$PROJECT_DIR$/CountdownSong/src/main/java/org/djna/countdown/CountdownSong.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CountdownSong/src/test/java/org/djna/countdown/test/VerseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CountdownSong/src/test/java/org/djna/countdown/test/VerseTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +23,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="2MKSA132oGAhQTeCTAKwG6vskGI" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -25,6 +34,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="16" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/CountdownSong/src/main/java/org/djna/countdown" />
   </component>
@@ -72,6 +82,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VerseTest.checkVerse2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CountdownSong" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.djna.countdown.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.djna.countdown.test" />
+      <option name="MAIN_CLASS_NAME" value="org.djna.countdown.test.VerseTest" />
+      <option name="METHOD_NAME" value="checkVerse2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="VerseTest.checkVerse98" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CountdownSong" />
       <extension name="coverage">
@@ -91,17 +117,34 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.VerseTest" />
-        <item itemvalue="JUnit.VerseTest.checkVerse98" />
         <item itemvalue="Application.CountdownSong" />
+        <item itemvalue="JUnit.VerseTest.checkVerse2" />
+        <item itemvalue="JUnit.VerseTest.checkVerse98" />
         <item itemvalue="JUnit.VerseTest.checkFirstVerses" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9abd7d83-acdd-4d13-b63f-f7e00574760a" name="Changes" comment="" />
+      <created>1677601558490</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677601558490</updated>
+    </task>
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

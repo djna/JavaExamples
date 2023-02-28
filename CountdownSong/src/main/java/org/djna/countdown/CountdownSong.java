@@ -1,5 +1,7 @@
 package org.djna.countdown;
 
+import java.util.Locale;
+
 public class CountdownSong {
     private int upper;
 
@@ -20,36 +22,52 @@ public class CountdownSong {
         return songText;
     }
 
-    public String verse(int number) {
-        switch (number) {
+    private static String quantityText(int howMany) {
+        switch (howMany) {
             case 0:
-                return (
-                        "No more cans of Lilt on the wall, " +
-                                "no more cans of Lilt.\n" +
-                                "Go to the store and buy some more, " +
-                                "99 cans of Lilt on the wall.\n"
-                );
+                return "no more cans";
             case 1:
-                return (
-                        "1 can of Lilt on the wall, " +
-                                "1 can of Lilt.\n" +
-                                "Take it down and pass it around, " +
-                                "no more cans of Lilt on the wall.\n"
-                );
-            case 2:
-                return (
-                        "2 cans of Lilt on the wall, " +
-                                "2 cans of Lilt.\n" +
-                                "Take one down and pass it around, " +
-                                "1 can of Lilt on the wall.\n"
-                );
+                return "1 can";
+            case 6:
+                return "a six-pack";
             default:
-                String howManyCans = "" + number;
-                String howManyCansLeft = "" + (number - 1);
-                return "%s cans of Lilt on the wall, %s cans of Lilt.\n".formatted(
-                        howManyCans, howManyCans) +
-                        "Take one down and pass it around, %s cans of Lilt on the wall.\n".formatted(
-                                howManyCansLeft);
+                return howMany + " cans";
         }
+    }
+
+    private static String action(int howMany) {
+        switch (howMany) {
+            case 0:
+                return "Go to the store and buy some more";
+            case 1:
+                return "Take it down and pass it around";
+            default:
+                return "Take one down and pass it around";
+        }
+
+    }
+
+    private static String capitalize(String str) {
+        if(str== null || str.isEmpty()) {
+            return str;
+        }
+
+        String remainder = str.length() == 1 ? "" : str.substring(1);
+
+        return str.substring(0, 1).toUpperCase() + remainder;
+    }
+
+    private static int nextQuantity( int currentQuantity ){
+        return currentQuantity <= 0 ? 99 : (currentQuantity - 1);
+    }
+
+    public String verse(int number) {
+
+
+        return "%s of Lilt on the wall, %s of Lilt.\n".formatted(
+                capitalize(quantityText(number)), quantityText(number)) +
+                "%s, %s of Lilt on the wall.\n".formatted(
+                        action(number), quantityText(nextQuantity(number)));
+
     }
 }

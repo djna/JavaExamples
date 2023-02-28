@@ -46,6 +46,24 @@ public class VerseTest {
     }
 
     @Test
+    public void checkVerse7() {
+        CountdownSong song = new CountdownSong();
+        String expectedSongText =
+                "7 cans of Lilt on the wall, 7 cans of Lilt.\n" +
+                        "Take one down and pass it around, a six-pack of Lilt on the wall.\n";
+        assertEquals(expectedSongText, song.verse(7));
+    }
+
+    @Test
+    public void checkVerse6() {
+        CountdownSong song = new CountdownSong();
+        String expectedSongText =
+                "A six-pack of Lilt on the wall, a six-pack of Lilt.\n" +
+                        "Take one down and pass it around, 5 cans of Lilt on the wall.\n";
+        assertEquals(expectedSongText, song.verse(6));
+    }
+
+    @Test
     public void checkVerseZero() {
         CountdownSong song = new CountdownSong();
         String expectedSongText =
