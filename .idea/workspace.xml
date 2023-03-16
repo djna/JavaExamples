@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9abd7d83-acdd-4d13-b63f-f7e00574760a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CountdownSong/src/main/java/org/djna/countdown/CountdownSong.java" beforeDir="false" afterPath="$PROJECT_DIR$/CountdownSong/src/main/java/org/djna/countdown/CountdownSong.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CountdownSong/src/test/java/org/djna/countdown/test/VerseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/CountdownSong/src/test/java/org/djna/countdown/test/VerseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
