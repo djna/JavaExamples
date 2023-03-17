@@ -24,7 +24,7 @@ public class WordList {
                 )
         ) {
             String line;
-            Pattern wordPattern = Pattern.compile("(?!.{0,4}\\d)(?!.{0,4}_)\\b\\w{5}\\b");
+            Pattern wordPattern = Pattern.compile("\\b\\w+\\b");
             while ((line = br.readLine()) != null) {
                 Matcher wordMatcher = wordPattern.matcher(line);
                 while( wordMatcher.find()) {
