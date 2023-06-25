@@ -65,20 +65,12 @@ public class Sudoku {
     }
 
     private static boolean isValidInRow(int row, int guess, int[][] board) {
-        for (int col = 0; col < 9; col++) {
-            if (board[row][col] == guess) {
-                return false;
-            }
-        }
+        // TODO return false if not valid
         return true;
     }
 
     private static boolean isValidInCol(int col, int guess, int[][] board) {
-        for (int row = 0; row < 9; row++) {
-            if (board[row][col] == guess) {
-                return false;
-            }
-        }
+        // TODO - return false if not valid
         return true;
     }
 
@@ -86,14 +78,8 @@ public class Sudoku {
         int squareX = slot.row / 3;
         int squareY = slot.col / 3;
 
-        for (int row = squareX * 3; row < (squareX + 1) * 3; row++) {
-            for (int col = squareY * 3; col < (squareY + 1) * 3; col++) {
-                if (board[row][col] == guess) {
-                    return false;
-                }
-            }
-        }
-        return true;
+        // TODO return true if  valid
+        return false;
     }
 
 
@@ -108,12 +94,7 @@ public class Sudoku {
 
     private static void printBoard(int[][] board)
     {
-        for (int[] row : board) {
-            for (int cell : row) {
-                System.out.print(cell == 0 ? "  " : cell + " ");
-            }
-            System.out.println();
-        }
+        System.out.println("TODO");
     }
 
     private static class Slot {
