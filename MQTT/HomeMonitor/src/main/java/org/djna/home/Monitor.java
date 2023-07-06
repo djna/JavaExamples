@@ -24,6 +24,9 @@ public class Monitor {
                 public void messageArrived(String topic, MqttMessage message) throws Exception {
                     System.out.println("Received message:");
                     System.out.println("Topic: " + topic);
+                    System.out.println("QoS: " + message.getQos());
+                    System.out.println("Retained: " + message.isRetained();
+                    System.out.println("Message ID: " + message.getId());
                     System.out.println("Message: " + new String(message.getPayload()));
                 }
 
