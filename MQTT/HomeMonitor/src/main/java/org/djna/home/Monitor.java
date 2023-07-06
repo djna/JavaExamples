@@ -1,6 +1,16 @@
 package org.djna;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import org.djna.home.MqttConfig;
+import org.djna.home.ThermostatReading;
 import org.eclipse.paho.client.mqttv3.*;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Monitor {
 
@@ -14,6 +24,14 @@ public class Monitor {
             // TODO vary other connection options
             options.setCleanSession(true);
 
+            // Create a Gson object
+            Gson gson = new Gson();
+
+            // Define the type of the Map
+            Type mapType = new TypeToken<Map<String, Object>>() {}.getType();
+            // Define type for a payload object
+            //Type readingType = new TypeToken<ThermostatReading>() {}.getType();
+
             client.setCallback(new MqttCallback() {
                 @Override
                 public void connectionLost(Throwable cause) {
@@ -25,9 +43,26 @@ public class Monitor {
                     System.out.println("Received message:");
                     System.out.println("Topic: " + topic);
                     System.out.println("QoS: " + message.getQos());
-                    System.out.println("Retained: " + message.isRetained();
+                    System.out.println("Retained: " + message.isRetained());
                     System.out.println("Message ID: " + message.getId());
-                    System.out.println("Message: " + new String(message.getPayload()));
+                    String payloadString = new String(message.getPayload());
+                    System.out.println("Message: " + payloadString );
+
+                    // Parse the JSON string into a HashMap
+                    Map<String, Object> resultMap = gson.fromJson( payloadString, mapType);
+
+                    // Print the parsed HashMap
+                    for (Map.Entry<String, Object> entry : resultMap.entrySet()) {
+                        System.out.println(entry.getKey() + ": " + entry.getValue());
+                    }
+
+                    try {
+                       ThermostatReading reading = gson.fromJson( payloadString, ThermostatReading.class);
+                       System.out.println("Read : " + reading);
+                    } catch( Throwable t){
+                        System.out.println("Problem : " + t);
+                    }
+
                 }
 
                 @Override
