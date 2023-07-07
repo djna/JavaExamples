@@ -14,9 +14,6 @@ public class Thermostat {
     public static void main(String[] args) {
 
         String location = "hall";
-        // TODO topic can be changed for some experiments
-        String topic        = MqttConfig.topicRoot + "/" + location;
-
 
         String broker       = MqttConfig.broker;
         String clientId     = "Thermostat";
@@ -30,20 +27,14 @@ public class Thermostat {
             sampleClient.connect(connOpts);
             System.out.println("Connected");
 
-            ThermostatReading oneReading = new ThermostatReading(location, new Date().getTime(), 29);
-            Gson gson = new Gson();
-            String jsonPayload = gson.toJson(oneReading);
-            System.out.println("Publishing message: "+jsonPayload);
-
-            MqttMessage message = new MqttMessage(jsonPayload.getBytes());
-
-            // TODO follow the articles to investigate changing QOS and retained ...
-            int qos             = 2;
-            // message.setQos(qos);
-            // message.setRetained(true);
-
-            sampleClient.publish(topic, message);
-            System.out.println("Message published");
+            for ( int count = 0; count < 100; count++) {
+                publishOneMessage(location, sampleClient, (11 + count) % 20 );
+                try {
+                    Thread.sleep(15_000);
+                } catch (InterruptedException e) {
+                    // ignore
+                }
+            }
             sampleClient.disconnect();
             System.out.println("Disconnected");
             System.exit(0);
@@ -55,6 +46,25 @@ public class Thermostat {
             System.out.println("exception "+me);
             me.printStackTrace();
         }
+    }
+
+    private static void publishOneMessage(String location, MqttClient sampleClient, int temperature) throws MqttException {
+        // TODO topic can be changed for some experiments
+        String topic        = MqttConfig.topicRoot + "/" + location;
+        ThermostatReading oneReading = new ThermostatReading(location, new Date().getTime(), temperature);
+        Gson gson = new Gson();
+        String jsonPayload = gson.toJson(oneReading);
+        System.out.println("Publishing message: "+jsonPayload);
+
+        MqttMessage message = new MqttMessage(jsonPayload.getBytes());
+
+        // TODO follow the articles to investigate changing QOS and retained ...
+        int qos             = 1;
+        message.setQos(qos);
+        message.setRetained(true);
+
+        sampleClient.publish(topic, message);
+        System.out.println("Message published");
     }
 }
 

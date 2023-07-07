@@ -22,10 +22,6 @@ public class Monitor {
             //MqttClient client = new MqttClient(BROKER, MqttClient.generateClientId());
             MqttClient client = new MqttClient(BROKER, "JavaMonitor");
 
-            MqttConnectOptions options = new MqttConnectOptions();
-            // TODO article will explore connection options
-            options.setCleanSession(false);
-
             // Create a Gson object
             Gson gson = new Gson();
 
@@ -71,8 +67,13 @@ public class Monitor {
                 }
             });
 
+            MqttConnectOptions options = new MqttConnectOptions();
+            // TODO article will explore connection and subscription options
+            options.setCleanSession(false);
+
             client.connect(options);
-            client.subscribe(TOPIC);
+            int qos = 1;
+            client.subscribe(TOPIC, qos);
 
             System.out.println("Subscribed to topic: " + TOPIC);
 
