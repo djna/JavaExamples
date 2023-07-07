@@ -24,3 +24,4 @@ hs_err_pid*
 .idea/libraries
 MQTT/.idea
 .lck
+.idea

@@ -1,4 +1,4 @@
-package org.djna;
+package org.djna.home;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import org.djna.home.MqttConfig;
@@ -19,18 +19,18 @@ public class Monitor {
 
     public static void main(String[] args) {
         try {
-            MqttClient client = new MqttClient(BROKER, MqttClient.generateClientId());
+            //MqttClient client = new MqttClient(BROKER, MqttClient.generateClientId());
+            MqttClient client = new MqttClient(BROKER, "JavaMonitor");
+
             MqttConnectOptions options = new MqttConnectOptions();
-            // TODO vary other connection options
-            options.setCleanSession(true);
+            // TODO article will explore connection options
+            options.setCleanSession(false);
 
             // Create a Gson object
             Gson gson = new Gson();
 
-            // Define the type of the Map
+            // Define the type of the Map, used by GSON to parse payload to a Map
             Type mapType = new TypeToken<Map<String, Object>>() {}.getType();
-            // Define type for a payload object
-            //Type readingType = new TypeToken<ThermostatReading>() {}.getType();
 
             client.setCallback(new MqttCallback() {
                 @Override

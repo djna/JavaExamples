@@ -1,5 +1,9 @@
 package org.djna.home;
 
+import java.time.*;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+import java.util.Locale;
 import java.util.Objects;
 
 public class ThermostatReading {
@@ -7,11 +11,17 @@ public class ThermostatReading {
     private long time;
     private int temperature;
 
+    public ThermostatReading(String location, long time, int temperature) {
+        this.location = location;
+        this.time = time;
+        this.temperature = temperature;
+    }
+
     @Override
     public String toString() {
         return "ThermostatReading{" +
                 "location='" + location + '\'' +
-                ", time=" + time +
+                ", time=" + getFormattedTime() +
                 ", temperature=" + temperature +
                 '}';
     }
@@ -54,6 +64,22 @@ public class ThermostatReading {
      */
     public long getTime() {
         return this.time;
+    }
+
+    /**
+     * get field
+     *
+     * @return time as a human readable String
+     */
+    public String getFormattedTime() {
+        Instant instant = Instant.ofEpochMilli (this.time);
+
+        ZoneId zoneId = ZoneId.of ( "GMT" );
+        ZonedDateTime zdt = instant.atZone ( zoneId );
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDateTime ( FormatStyle.FULL );
+        formatter = formatter.withLocale ( Locale.UK );
+        return zdt.format(formatter);
     }
 
     /**

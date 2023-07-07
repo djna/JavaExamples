@@ -5,29 +5,43 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
+import com.google.gson.Gson;
+
+import java.util.Date;
+
 public class Thermostat {
 
     public static void main(String[] args) {
 
-        // TODO vary the topic
-        String topic        = MqttConfig.topicRoot + "/hall";
-        String content      = "{\"location\":\"hall\",\"time\":1688624544056,\"temperature\":2694}";
-        // TODO vary QOS
-        int qos             = 2;
+        String location = "hall";
+        // TODO topic can be changed for some experiments
+        String topic        = MqttConfig.topicRoot + "/" + location;
+
+
         String broker       = MqttConfig.broker;
-        String clientId     = "JavaSample";
-        MemoryPersistence persistence = new MemoryPersistence();
+        String clientId     = "Thermostat";
 
         try {
+            MemoryPersistence persistence = new MemoryPersistence();
             MqttClient sampleClient = new MqttClient(broker, clientId, persistence);
             MqttConnectOptions connOpts = new MqttConnectOptions();
-            connOpts.setCleanSession(true);
+            connOpts.setCleanSession(false);
             System.out.println("Connecting to broker: "+broker);
             sampleClient.connect(connOpts);
             System.out.println("Connected");
-            System.out.println("Publishing message: "+content);
-            MqttMessage message = new MqttMessage(content.getBytes());
-            message.setQos(qos);
+
+            ThermostatReading oneReading = new ThermostatReading(location, new Date().getTime(), 29);
+            Gson gson = new Gson();
+            String jsonPayload = gson.toJson(oneReading);
+            System.out.println("Publishing message: "+jsonPayload);
+
+            MqttMessage message = new MqttMessage(jsonPayload.getBytes());
+
+            // TODO follow the articles to investigate changing QOS and retained ...
+            int qos             = 2;
+            // message.setQos(qos);
+            // message.setRetained(true);
+
             sampleClient.publish(topic, message);
             System.out.println("Message published");
             sampleClient.disconnect();
@@ -38,7 +52,7 @@ public class Thermostat {
             System.out.println("msg "+me.getMessage());
             System.out.println("loc "+me.getLocalizedMessage());
             System.out.println("cause "+me.getCause());
-            System.out.println("excep "+me);
+            System.out.println("exception "+me);
             me.printStackTrace();
         }
     }
